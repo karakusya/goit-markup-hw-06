@@ -369,6 +369,7 @@
     <footer class="footer">
       <div class="footer-container container">
         <div class="nav-footer">
+
           <a class="link logo logo-footer" href="/"
             >Web<span class="logo-white">Studio</span></a
           >
@@ -397,7 +398,7 @@
           </address>
         </div>
         <div class="footer-soc-media">
-          <h3 class="soc-media-title">ПРИЄДНУЙТЕСЬ</h3>
+          <h3 class="soc-media-title footer-title">ПРИЄДНУЙТЕСЬ</h3>
           <ul class="list soc-media">
             <li class="soc-item">
               <a href="" class="link soc-link">
@@ -429,6 +430,15 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form-container">
+          <h2 class="footer-form-title footer-title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h2>
+          <form action="" class="footer-form">
+            <input required type="email" name="email-input-footer" id="" class="footer-input" placeholder="E-mail"></input>
+            <button type="submit" class="footer-form-btn form-btn">Підписатися<svg width="24" height="24">
+              <use href="./image/symbol-defs.svg#icon-icon-send"></use>
+            </svg></button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -438,6 +448,52 @@
             <use href="./image/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
+        <form name="modal-form" autocomplete="off">
+          <strong class="modal-title">Залиште свої дані, ми вам передзвонимо</strong>
+          <div class="input-section">
+            <div class="input-item">
+              <label class="input-title" for="name-input">Ім'я</label>
+              <div class="input-container">
+                <input required type="text" class="input-window" name="Ім'я" id="name-input"> </input>
+                <svg class="input-icon">
+                  <use href="./image/symbol-defs.svg#icon-name-modal"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="input-item">
+              <label class="input-title" for="phone-input">Телефон</label>
+              <div class="input-container">
+                <input required type="tel" class="input-window" name="Телефон" id="phone-input"> </input>
+                <svg class="input-icon">
+                  <use href="./image/symbol-defs.svg#icon-phone-modal"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="input-item">
+              <label class="input-title" for="email-input">Пошта</label>
+              <div class="input-container">
+                <input required type="email" class="input-window" name="Пошта" id="email-input"> </input>
+                <svg class="input-icon">
+                  <use href="./image/symbol-defs.svg#icon-email-modal"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="input-item">
+              <label class="input-title" for="comment">Коментар</label>
+              <textarea required type="text" class="input-window comment-window"  name="Коментар" rows="5" placeholder="Введіть текст" id="comment"></textarea>
+            </div>
+          </div>
+          <label class="check-box-container"> 
+            
+            <input required type="checkbox" class="check-box-btn visually-hidden"></input>
+            <svg class="icon-checkbox" width="16" height="15"> 
+              <use href="./image/symbol-defs.svg#icon-icon-check" class="icon-check" ></use>
+              <use href="./image/symbol-defs.svg#icon-check-box" class="icon-uncheck"  ></use>
+            </svg>
+            <span class="check-box-title">Погоджуюся з розсилкою та приймаю <a href="" class="conditions-link">Умови договору</a></span>
+          </label>
+          <button type="submit" class="send-btn form-btn">Відправити</button>
+        </form>
       </div>
     </div>
   
