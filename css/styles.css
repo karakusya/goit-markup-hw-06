@@ -137,16 +137,16 @@ header {
 }
 
 .order-btn {
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
-
+  justify-content: center;
   color: var(--white-color);
 
   cursor: pointer;
   font-family: "Roboto";
-  width: 200px;
-  height: 50px;
+  min-width: 200px;
+  padding: 10px 32px;
   background: var(--brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -560,7 +560,14 @@ address {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   cursor: pointer;
+  fill: currentColor;
+  transition: fill var(--transition) var(--timing-function);
 }
+
+.modal-close:hover, .modal-close:focus {
+  fill: var(--brand-color);
+}
+
 .modal-icon{
   fill: var(--black-color);
 }
@@ -575,7 +582,7 @@ address {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   width: 528px;
-  
+  height: 581px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transition) var(--timing-function);
 }
@@ -601,7 +608,7 @@ address {
 }
 
 .input-title {
-  
+  display: block;
   font-size: 12px;
 line-height: 1.16;
 letter-spacing: 0.01em;
@@ -611,13 +618,16 @@ margin-bottom: 4px;
 }
 
 .input-window{
-  width: 448px;
+  width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   fill: var(--black-color);
   padding: 12px 42px;
   outline: transparent;
   transition: border-color var(--transition) var(--timing-function);
+}
+.input-container .input-window {
+  height: 40px;
 }
  .input-window:hover, .input-window:focus {
   border-color: var(--brand-color);
@@ -634,9 +644,16 @@ margin-bottom: 4px;
   padding-left: 16px;
   padding-right: 16px;
   resize: none;
+  font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+
+color: rgba(117, 117, 117, 0.5);
 }
 .check-box-container{
   display: flex;
+  justify-content: center;
+  cursor: pointer;
   gap: 8px;
   align-items: center;
 
@@ -652,6 +669,14 @@ transition: opacity var(--transition) var(--timing-function);
   opacity: 0;
   transition: opacity var(--transition) var(--timing-function);
 }
+.icon-uncheck {
+  fill: currentColor;
+  transition: opacity var(--transition) var(--timing-function), fill var(--transition) var(--timing-function);
+}
+.check-box-btn:hover + .icon-checkbox .icon-uncheck, .check-box-btn:focus + .icon-checkbox .icon-uncheck{
+  fill: var(--brand-color);
+}
+
 .check-box-btn:checked + .icon-checkbox .icon-check{
 opacity: 1;
 }
@@ -676,9 +701,9 @@ opacity: 1;
 .conditions-link {
   color: var(--brand-color);
 }
-.footer-form-btn{
+.order-btn-icon{
   fill: var(--white-color);
-  gap: 10px;
+  margin-left: 10px;
 }
 .send-btn {
   margin-left: auto;
@@ -706,7 +731,7 @@ opacity: 1;
   transition: background-color var(--transition) var(--timing-function);
 }
 
-.form-btn:hover, .form-btn:focus{
+.order-btn:hover, .order-btn:focus{
   background-color: #188CE8;
 }
 
@@ -716,7 +741,8 @@ opacity: 1;
   fill: var(--black-color);
   position: absolute;
   left: 12px;
-  top:11px;
+  top: 50%;
+  transform: translateY(-50%);
   transition: fill var(--transition) var(--timing-function);
 }
 
